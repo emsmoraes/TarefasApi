@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: 'tasks-api'
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: tasks-api
+      PGDATA: /data/postgres
