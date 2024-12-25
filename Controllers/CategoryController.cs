@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TarefasApi.Dtos;
 using TarefasApi.Models;
 using TarefasApi.Services;
 
@@ -31,24 +32,26 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Add(Category category)
+    public async Task<IActionResult> Add([FromBody] CreateCategoryDto createCategoryDto)
     {
-        var newCategory = await _service.AddAsync(category);
-        return CreatedAtAction(nameof(GetById), new { id = newCategory.Id }, newCategory);
+        var category = new Category(){
+            Name = createCategoryDto.Name
+        };
+        
+        var createdCategory = await _service.AddAsync(category);
+        return CreatedAtAction(nameof(GetById), new { id = createdCategory.Id }, createdCategory);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, Category category)
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateCategoryDto UpdateCategoryDto)
     {
-        if(id != category.Id) return BadRequest();
+      var existingCategory = await _service.GetByIdAsync(id);
 
-        var existingCategory = await _service.GetByIdAsync(id);
+      if(existingCategory is null) return NotFound();
 
-        if(existingCategory is null) return NotFound();
+      existingCategory.Name = UpdateCategoryDto.Name;
 
-        await _service.UpdateAsync(category);
-
-        return NoContent();
+      return Ok(existingCategory);
     }
 
     [HttpDelete("{id}")]

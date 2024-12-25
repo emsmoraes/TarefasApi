@@ -133,3 +133,4 @@
 /Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/obj/Debug/net8.0/TarefasApi.sourcelink.json
