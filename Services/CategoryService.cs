@@ -1,3 +1,4 @@
+using TarefasApi.Dtos.Categories;
 using TarefasApi.Models;
 using TarefasApi.Repositories;
 
@@ -5,7 +6,7 @@ namespace TarefasApi.Services;
 
 public interface ICategoryService
 {
-    Task<IEnumerable<Category>> GetAllAsync();
+    Task<IEnumerable<CategoryWithTasksDto>> GetAllAsync();
     Task<Category?> GetByIdAsync(int id);
     Task<Category> AddAsync(Category category);
     Task<Category> UpdateAsync(Category category);
@@ -20,7 +21,7 @@ public class CategoryService : ICategoryService
         _repository = repository;
     }
 
-    public async Task<IEnumerable<Category>> GetAllAsync()
+    public async Task<IEnumerable<CategoryWithTasksDto>> GetAllAsync()
     {
         return await _repository.GetAllAsync();
     }

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using TarefasApi.Dtos;
+using TarefasApi.Dtos.Categories;
 using TarefasApi.Models;
 using TarefasApi.Services;
 

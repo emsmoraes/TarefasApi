@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using TarefasApi.Data;
+using TarefasApi.Dtos.Tasks;
+using TarefasApi.Dtos.Categories;
 using TarefasApi.Models;
 
 namespace TarefasApi.Repositories;
 
 public interface ICategoryRepository
 {
-    Task<IEnumerable<Category>> GetAllAsync();
+    Task<IEnumerable<CategoryWithTasksDto>> GetAllAsync();
     Task<Category> GetByIdAsync(int id);
     Task<Category> AddAsync(Category category);
     Task<Category> UpdateAsync(Category category);
@@ -21,14 +23,26 @@ public class CategoryRepository : ICategoryRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Category>> GetAllAsync()
+    public async Task<IEnumerable<CategoryWithTasksDto>> GetAllAsync()
     {
-        return await _context.Categories.Include(c => c.Tasks).ToListAsync();
+        var categories = await _context.Categories.Include(c => c.Tasks).ToListAsync();
+        return categories.Select(c => new CategoryWithTasksDto
+        {
+            Id = c.Id,
+            Name = c.Name,
+            Tasks = c.Tasks.Select(t => new TaskDto
+            {
+                Id = t.Id,
+                Name = t.Name,
+                Description = t.Description,
+                Concluded = t.Concluded
+            }).ToList()
+        });
     }
 
     public async Task<Category?> GetByIdAsync(int id)
     {
-        return await _context.Categories.Include(c => c.Tasks).FirstOrDefaultAsync(c => c.Id == id);
+        return await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
     }
 
     public async Task<Category> AddAsync(Category category)
