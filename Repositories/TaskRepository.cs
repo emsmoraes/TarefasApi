@@ -2,11 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using TarefasApi.Data;
 using TarefasApi.Dtos.Categories;
 using TarefasApi.Dtos.Tasks;
-using TarefasApi.Models;
 
 namespace TarefasApi.Repositories;
 
-public interface ITaskRepository 
+public interface ITaskRepository
 {
     Task<IEnumerable<TaskDto>> GetAllAsync();
     Task<TarefasApi.Models.Task> GetByIdAsync(int id);
@@ -25,7 +24,10 @@ public class TaskRepository : ITaskRepository
 
     public async Task<IEnumerable<TaskDto>> GetAllAsync()
     {
-        var tasks = await _context.Tasks.Include(t => t.Category).ToListAsync();
+        var tasks = await _context.Tasks
+      .Include(t => t.Category)
+      .Include(t => t.User)
+      .ToListAsync();
         return tasks.Select(t => new TaskDto
         {
             Id = t.Id,
@@ -36,6 +38,13 @@ public class TaskRepository : ITaskRepository
             {
                 Id = t.Category.Id,
                 Name = t.Category.Name,
+            },
+            User = new Dtos.UserDto()
+            {
+                Id = t.User.Id,
+                Name = t.User.Name,
+                Email = t.User.Email,
+                Idade = t.User.Idade
             }
         });
     }

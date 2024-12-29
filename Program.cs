@@ -22,6 +22,8 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
@@ -34,5 +36,6 @@ if (app.Environment.IsDevelopment())
 // app.UseHttpsRedirection();
 
 app.MapControllers();
+app.UseStaticFiles();
 
 app.Run();

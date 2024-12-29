@@ -11,8 +11,8 @@ using TarefasApi.Data;
 namespace TarefasApi.Migrations
 {
     [DbContext(typeof(TasksContext))]
-    [Migration("20241227233702_AddInitialTables")]
-    partial class AddInitialTables
+    [Migration("20241229201145_AddUserAvatar")]
+    partial class AddUserAvatar
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,11 +63,44 @@ namespace TarefasApi.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Tasks");
+                });
+
+            modelBuilder.Entity("TarefasApi.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Idade")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProfilePictureUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("TarefasApi.Models.Task", b =>
@@ -78,12 +111,25 @@ namespace TarefasApi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("TarefasApi.Models.User", "User")
+                        .WithMany("Task")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("TarefasApi.Models.Category", b =>
                 {
                     b.Navigation("Tasks");
+                });
+
+            modelBuilder.Entity("TarefasApi.Models.User", b =>
+                {
+                    b.Navigation("Task");
                 });
 #pragma warning restore 612, 618
         }

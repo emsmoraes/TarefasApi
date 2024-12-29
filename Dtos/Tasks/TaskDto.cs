@@ -8,4 +8,5 @@ public class TaskDto
     public string Description { get; set; }
     public bool Concluded { get; set; }
     public CategoryDto? Category { get; set; }
+    public UserDto? User { get; set; }
 }

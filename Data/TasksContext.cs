@@ -10,6 +10,7 @@ public class TasksContext : DbContext
 
     public DbSet<Category> Categories { get; set; }
     public DbSet<TarefasApi.Models.Task> Tasks { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
