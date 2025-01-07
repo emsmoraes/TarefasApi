@@ -135,3 +135,8 @@
 /Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
 /Users/eduardomeneses/Documents/Me/Projects/TarefasApi/obj/Debug/net8.0/TarefasApi.sourcelink.json
 /Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/TarefasApi.staticwebassets.runtime.json
+/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/MailKit.dll
+/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/MimeKit.dll
+/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll

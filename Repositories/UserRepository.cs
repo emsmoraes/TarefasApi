@@ -24,13 +24,16 @@ public class UserRepository : IUserRepository
 
     public async Task<IEnumerable<UserDto>> GetAllAsync()
     {
+        var baseUrl = "https://localhost:5000";
+
         var users = await _context.Users.ToListAsync();
         return users.Select(u => new UserDto
         {
             Id = u.Id,
             Name = u.Name,
             Email = u.Email,
-            Idade = u.Idade
+            Idade = u.Idade,
+            ProfilePictureUrl = $"{baseUrl}/{u.ProfilePictureUrl}"
         });
     }
 

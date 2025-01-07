@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VXCHriGt8xEHBUftKQx5RObAdvQXWKfqvbr6zuU/hQk=",
+  "Hash": "cHULGcCRtGTitL5AM9tOpy8+e/nWCz71xf+l0n2xCKU=",
   "Source": "TarefasApi",
   "BasePath": "_content/TarefasApi",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/b51194ec-4643-4e53-af0e-246988842870_CRIATIVOS EDUARDO PROGRAMADOR3.jpg",
+      "SourceId": "TarefasApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/",
+      "BasePath": "_content/TarefasApi",
+      "RelativePath": "uploads/b51194ec-4643-4e53-af0e-246988842870_CRIATIVOS EDUARDO PROGRAMADOR3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/b51194ec-4643-4e53-af0e-246988842870_CRIATIVOS EDUARDO PROGRAMADOR3.jpg"
+    },
+    {
+      "Identity": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/c8314499-242c-4df0-aa00-1789c821ccc5_4a2f2054-8ba0-46e2-becb-6a8431a2be8f.webp",
+      "SourceId": "TarefasApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/",
+      "BasePath": "_content/TarefasApi",
+      "RelativePath": "uploads/c8314499-242c-4df0-aa00-1789c821ccc5_4a2f2054-8ba0-46e2-becb-6a8431a2be8f.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/c8314499-242c-4df0-aa00-1789c821ccc5_4a2f2054-8ba0-46e2-becb-6a8431a2be8f.webp"
+    },
     {
       "Identity": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/d030fb69-9537-435a-9df1-3b78266dc680_lula11111.png",
       "SourceId": "TarefasApi",
@@ -34,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/d030fb69-9537-435a-9df1-3b78266dc680_lula11111.png"
+    },
+    {
+      "Identity": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/f81cfd66-e558-4276-ad22-adf8429e617c_lula11111.png",
+      "SourceId": "TarefasApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/",
+      "BasePath": "_content/TarefasApi",
+      "RelativePath": "uploads/f81cfd66-e558-4276-ad22-adf8429e617c_lula11111.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/f81cfd66-e558-4276-ad22-adf8429e617c_lula11111.png"
     }
   ]
 }

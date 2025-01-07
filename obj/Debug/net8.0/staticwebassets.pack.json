@@ -1,8 +1,20 @@
 {
   "Files": [
     {
+      "Id": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/b51194ec-4643-4e53-af0e-246988842870_CRIATIVOS EDUARDO PROGRAMADOR3.jpg",
+      "PackagePath": "staticwebassets/uploads/b51194ec-4643-4e53-af0e-246988842870_CRIATIVOS EDUARDO PROGRAMADOR3.jpg"
+    },
+    {
+      "Id": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/c8314499-242c-4df0-aa00-1789c821ccc5_4a2f2054-8ba0-46e2-becb-6a8431a2be8f.webp",
+      "PackagePath": "staticwebassets/uploads/c8314499-242c-4df0-aa00-1789c821ccc5_4a2f2054-8ba0-46e2-becb-6a8431a2be8f.webp"
+    },
+    {
       "Id": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/d030fb69-9537-435a-9df1-3b78266dc680_lula11111.png",
       "PackagePath": "staticwebassets/uploads/d030fb69-9537-435a-9df1-3b78266dc680_lula11111.png"
+    },
+    {
+      "Id": "/Users/eduardomeneses/Documents/Me/Projects/TarefasApi/wwwroot/uploads/f81cfd66-e558-4276-ad22-adf8429e617c_lula11111.png",
+      "PackagePath": "staticwebassets/uploads/f81cfd66-e558-4276-ad22-adf8429e617c_lula11111.png"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.TarefasApi.Microsoft.AspNetCore.StaticWebAssets.props",

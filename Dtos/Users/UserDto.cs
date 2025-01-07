@@ -5,4 +5,5 @@ public class UserDto
     public string Name { get; set; }
     public string Email { get; set; }
     public int Idade { get; set; }
+    public string ProfilePictureUrl { get; set; }
 }
