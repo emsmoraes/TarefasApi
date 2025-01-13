@@ -49,6 +49,7 @@ public class TaskController : ControllerBase
         {
             Name = createTaskDto.Name,
             Description = createTaskDto.Description,
+            OccurrenceDate = createTaskDto.OccurrenceDate,
             Category = category,
             User = user
         };
@@ -72,6 +73,7 @@ public class TaskController : ControllerBase
             Name = createdTask.Name,
             Description = createdTask.Description,
             Concluded = createdTask.Concluded,
+            OccurrenceDate = createdTask.OccurrenceDate,
             Category = categoryDto,
             User = userDto
         };
@@ -94,6 +96,7 @@ public class TaskController : ControllerBase
         task.Description = updateTaskDto.Description;
         task.Concluded = updateTaskDto.Concluded;
         task.Category = category;
+        task.OccurrenceDate = updateTaskDto.OccurrenceDate;
         task.User = user;
 
         await _taskService.UpdateAsync(task);

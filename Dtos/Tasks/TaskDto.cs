@@ -7,6 +7,7 @@ public class TaskDto
     public string Name { get; set; }
     public string Description { get; set; }
     public bool Concluded { get; set; }
+    public DateTime OccurrenceDate { get; set; }
     public CategoryDto? Category { get; set; }
     public UserDto? User { get; set; }
 }

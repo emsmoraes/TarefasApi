@@ -6,4 +6,5 @@ public class UpdateTaskDto
         public bool Concluded { get; set; }
         public int CategoryId { get; set; }
         public int UserId { get; set; }
+        public required DateTime OccurrenceDate { get; set; }
 }

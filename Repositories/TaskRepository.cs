@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TarefasApi.Data;
+using TarefasApi.Dtos;
 using TarefasApi.Dtos.Categories;
 using TarefasApi.Dtos.Tasks;
 
@@ -34,6 +35,7 @@ public class TaskRepository : ITaskRepository
             Name = t.Name,
             Description = t.Description,
             Concluded = t.Concluded,
+            OccurrenceDate = t.OccurrenceDate,
             Category = new CategoryDto()
             {
                 Id = t.Category.Id,
@@ -51,7 +53,13 @@ public class TaskRepository : ITaskRepository
 
     public async Task<TarefasApi.Models.Task?> GetByIdAsync(int id)
     {
-        return await _context.Tasks.FirstOrDefaultAsync(t => t.Id == id);
+        var task = await _context.Tasks.FirstOrDefaultAsync(t => t.Id == id);
+
+
+        if (task is null)
+            return null;
+
+        return task;
     }
 
     public async Task<TarefasApi.Models.Task> AddAsync(TarefasApi.Models.Task task)
